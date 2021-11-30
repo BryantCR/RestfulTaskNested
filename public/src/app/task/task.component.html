@@ -8,27 +8,31 @@
 -->
 <main class="mainHoldTasks">
     <div class="tasksHolder">
-        <h2>
-            New task
-        </h2>
-        <form class="editinfo" (submit) = "postNewTask($event)">
-            <div>
-                <label>Title:</label>
-                <input type="text" name="addTitle" [ngModel] = "title" placeholder="Add title">
-            </div>
-            <div>
-                <label>Description:</label>
-                <input type="text" name="addDesc" [ngModel] = "description" placeholder="Add description">
-            </div>
-            <div>
-                <button type="submit">
-                    Create
-                </button>
-            </div>
-            <div>
-                Values: {{title}} {{description}}
-            </div>
-        </form>
+        <!--
+            <h2>
+                New task
+            </h2>
+            <form class="editinfo" (submit) = "postNewTask($event)">
+                <div>
+                    <label>Title:</label>
+                    <input type="text" name="addTitle" [ngModel] = "title" placeholder="Add title">
+                </div>
+                <div>
+                    <label>Description:</label>
+                    <input type="text" name="addDesc" [ngModel] = "description" placeholder="Add description">
+                </div>
+                <div>
+                    <button type="submit">
+                        Create
+                    </button>
+                </div>
+                <div>
+                    
+                        Values: {{title}} {{description}}
+                    
+                </div>
+            </form>
+        -->
         <h3>
             Task List
         </h3>
@@ -43,12 +47,14 @@
                         Show more
                     </button>
                 </form>
-                <form class="" action="" (submit) = "taskInfo($event)" >
+                <!--
+                    <form class="" action="" (submit) = "taskInfo($event)" >
                     <input id="title" type="hidden" value="{{task.title}}">
                     <button type="submit" class="">
                         Edit
                     </button>
                 </form>
+                -->
                 <form class="" action="" (submit) = "deleteTask($event)" >
                     <input id="title" type="hidden" value="{{task.title}}">
                     <button type="submit" class="">
@@ -59,7 +65,14 @@
             
         </div>
     </div>
+    
+    
     <div *ngIf="task2.title" class="holdTaskinfo">
+        <h3>
+            Task Info
+        </h3>
+    <app-usergui [task2] = "task2"></app-usergui>
+        <!-- 
         <div class="taskInfo">
             <div class="title">
                 Description: {{task2.description}}
@@ -68,6 +81,10 @@
                 Status: {{task2.completed}}
             </div>
         </div>
+        -->
+        <!--
+
+        
         <div *ngIf="task2.title" class="edit">
             <h1>
                 Edit
@@ -104,5 +121,7 @@
                 </form>
             </div>
         </div>
+        -->
     </div>
+    
 </main>
